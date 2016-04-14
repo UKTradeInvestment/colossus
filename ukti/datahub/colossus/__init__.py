@@ -2,8 +2,8 @@ import flask
 import random
 import string
 
-from ukti.datahub.bastion.exceptions import BadRequestException
-from ukti.datahub.bastion.views import BastionView
+from ukti.datahub.colossus.exceptions import BadRequestException
+from ukti.datahub.colossus.views import ColossusView
 
 __version__ = (0, 0, 1)
 
@@ -31,9 +31,9 @@ def handle_invalid_usage(error):
 
 
 app.add_url_rule('/', defaults={"path": ""},
-                 view_func=BastionView.as_view("BastionRoot"))
+                 view_func=ColossusView.as_view("BastionRoot"))
 app.add_url_rule('/<path:path>',
-                 view_func=BastionView.as_view("BastionView"))
+                 view_func=ColossusView.as_view("BastionView"))
 
 
 if __name__ == "__main__":
