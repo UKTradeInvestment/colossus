@@ -1,4 +1,4 @@
-# colossus
+# Colossus (bastion server)
 
 The bastion server component of the multi-part authentication system for
 Cerebro.  It stands between the user and the data server.
